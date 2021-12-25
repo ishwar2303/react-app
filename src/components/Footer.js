@@ -1,6 +1,6 @@
 import React from 'react';
-import './Footer.css';
-import { Button } from './Button';
+import '../components/css/Footer.css';
+
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -21,7 +21,7 @@ function Footer() {
               type='email'
               placeholder='Your Email'
             />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
+            <button className='btn btn--outline btn--medium'>Subscribe</button>
           </form>
         </div>
       </section>
@@ -76,7 +76,7 @@ function Footer() {
               target='_blank'
               aria-label='Facebook'
             >
-              <i class='fab fa-facebook-f' />
+              <i class='fab fa-facebook-f fb-color' />
             </Link>
             <Link
               class='social-icon-link instagram'
@@ -84,7 +84,7 @@ function Footer() {
               target='_blank'
               aria-label='Instagram'
             >
-              <i class='fab fa-instagram' />
+              <i class='fab fa-instagram instagram-color' />
             </Link>
             <Link
               class='social-icon-link youtube'
@@ -92,7 +92,7 @@ function Footer() {
               target='_blank'
               aria-label='Youtube'
             >
-              <i class='fab fa-youtube' />
+              <i class='fab fa-youtube youtube-color' />
             </Link>
             <Link
               class='social-icon-link twitter'
@@ -100,7 +100,7 @@ function Footer() {
               target='_blank'
               aria-label='Twitter'
             >
-              <i class='fab fa-twitter' />
+              <i class='fab fa-twitter twitter-color' />
             </Link>
             <Link
               class='social-icon-link twitter'

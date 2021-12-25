@@ -1,32 +1,28 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import { Button } from './Button'
 
-import './Navbar.css'
+import '../components/css/Navbar.css'
 
 function Navbar() {
     const [click, setClick] = useState(false)
-    const [button, setButton] = useState(true)
-
     const handleClick = () => setClick(!click)
     const closeMobileMenu = () => setClick(false)
 
-    const showButton = () => {
-        if(window.innerWidth <= 960) {
-            setButton(false)
-        }
-        else {
-            setButton(true)
-        }
-
+    const backToTop = () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 
-    useEffect(() => {
-        showButton()
-    }, [])
-
-    window.addEventListener('resize', showButton)
+    window.onscroll = () => {
+        let el = document.getElementsByClassName('back-to-top')[0]
+        if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            el.style.display = 'flex'
+        }
+        else {
+            el.style.display = 'none'
+        }
+    }
 
     return (
         <>
@@ -55,9 +51,21 @@ function Navbar() {
                                 Products
                             </Link>
                         </li>
+                        <li className='nav-item'>
+                            <Link to='/team' className='nav-links' onClick={closeMobileMenu}>
+                                Team
+                            </Link>
+                        </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                    <Link to='/sign-up' className='btn btn--outline btn--medium'>Sign Up</Link>
+                    <Link to='/sign-in' className='btn btn--outline btn--medium'>Sign In</Link>
                 </div>
+
+
+                <div className='back-to-top' onClick={backToTop}>
+                    <i className='fas fa-chevron-up' />
+                </div>
+
             </nav>  
         </>
     )

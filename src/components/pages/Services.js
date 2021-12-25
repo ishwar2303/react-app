@@ -3,9 +3,9 @@ import '../../App.css'
 
 function Services() {
     return (
-        <div>
-            <h1>Services Content</h1>
-        </div>
+        <h1 className='services'>
+            Services Content
+        </h1>
     )
 }
 

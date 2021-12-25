@@ -1,8 +1,7 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import '../App.css'
-import { Button } from './Button'
-import './Banner.css'
+import '../components/css/Banner.css'
 
 export default function Banner() {
     return (
@@ -11,20 +10,8 @@ export default function Banner() {
             <h1>ADVENTURE AWAITS</h1>
             <p>What are you waiting for</p>
             <div className='banner-btns'>
-                <Button
-                    className='btns'
-                    buttonStyle='button--outline'
-                    buttonSize='btn--large'
-                >
-                    GET STARTED
-                </Button>
-                <Button
-                    className='btns'
-                    buttonStyle='button--primary'
-                    buttonSize='btn--large'
-                >
-                    WATCH TRAILER <i className='far fa-play-circle' />
-                </Button>
+                <Link to='/sign-up' className='btn btn--primary btn--medium'>GET STARTED</Link>
+                <Link to='/sign-in' className='btn btn--primary btn--medium'>WATCH TRAILER  <i className='far fa-play-circle' /></Link>
             </div>
         </div>
     )
