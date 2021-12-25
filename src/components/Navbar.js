@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-
-
 import '../components/css/Navbar.css'
 
 function Navbar() {
@@ -56,9 +54,9 @@ function Navbar() {
                                 Team
                             </Link>
                         </li>
+                        <Link to='/sign-up' className='btn btn--outline btn--medium' onClick={closeMobileMenu}>Sign Up</Link>
+                        <Link to='/sign-in' className='btn btn--outline btn--medium' onClick={closeMobileMenu}>Sign In</Link>
                     </ul>
-                    <Link to='/sign-up' className='btn btn--outline btn--medium'>Sign Up</Link>
-                    <Link to='/sign-in' className='btn btn--outline btn--medium'>Sign In</Link>
                 </div>
 
 
