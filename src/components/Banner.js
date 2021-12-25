@@ -6,7 +6,8 @@ import '../components/css/Banner.css'
 export default function Banner() {
     return (
         <div className='banner-container'>
-            <video src='videos/video-2.mp4' autoPlay loop muted />
+            /*<video src='videos/video-2.mp4' autoPlay loop muted />*/
+            <img src='images/img-1.jpg' />
             <h1>ADVENTURE AWAITS</h1>
             <p>What are you waiting for</p>
             <div className='banner-btns'>
